@@ -297,7 +297,8 @@ function M.load_syntax(colors)
 	syntax['Float'] = syntax['Constant']
 	syntax['Function'] = syntax['Identifier']
 	syntax['Include'] = syntax['PreProc']
-	syntax['Keyword'] = syntax['Statement']
+	-- syntax['Keyword'] = syntax['Statement']
+	syntax['Keyword'] = {fg=colors.base1}
 	syntax['Label'] = syntax['Statement']
 	syntax['Macro'] = syntax['PreProc']
 	syntax['Number'] = syntax['Constant']
@@ -427,7 +428,7 @@ function M.load_syntax(colors)
 	syntax['@string.regexp'] = syntax['String']
 	syntax['@string.escape'] = syntax['Special']
 	-- deprecated in nvim-treesitter 0.10
-	syntax['@string.special'] = syntax['Special']
+	-- syntax['@string.special'] = syntax['Special']
 	-- replacement in nvim-treesitter 0.10
 	syntax['@markup.link.label'] = syntax['Constant']
 
@@ -516,7 +517,7 @@ function M.load_syntax(colors)
 	-- deprecated in nvim-treesitter 0.10
 	syntax['@module'] = syntax['Identifier']
 	-- replacement in nvim-treesitter 0.10
-	syntax['@string.special.symbol'] = syntax['Identifier']
+	syntax['@string.special.symbol'] = syntax['Type']
 	-- }}}
 
 	-- Text {{{
